@@ -162,8 +162,9 @@
             .then(response => response.json())
             .then(data => {
     data.forEach(participant => {
-        let downloadBtn = `<a href="https://wedding-wi9l.onrender.com/photos/${encodeURIComponent(participant.filename)}" 
-            class="btn btn-primary btn-sm" download="${participant.filename}">Download</a>`;
+        let downloadBtn = `<a href="https://wedding-wi9l.onrender.com/photos/${participant.id}" 
+    class="btn btn-primary btn-sm" download="${participant.filename}">Download</a>`;
+
 
         photoTable.row.add([
             participant.id,
